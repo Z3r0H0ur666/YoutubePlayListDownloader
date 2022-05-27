@@ -1,5 +1,4 @@
 from pytube import Playlist
-p = input("Enter the url of the playlist")
 
 print("""\033[91m
    _   _       _ _  _____ ___      _ ____  
@@ -13,6 +12,8 @@ print("""\033[91m
 				\033[93mv.1.2
 				By NullC0d3\033[00m
 """)
+p = input("Enter the url of the playlist")
+
 print(f'Downloading: {p.title}')
 
 for video in p.videos:

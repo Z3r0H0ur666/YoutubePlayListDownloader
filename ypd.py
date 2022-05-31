@@ -12,11 +12,14 @@ print("""\033[91m
 				\033[93mv.1.2
 				By NullC0d3\033[00m
 """)
-p = input("Enter the url of the playlist")
 
-print(f'Downloading: {p.title}')
 
-for video in p.videos:
+GetLink = input("Enter th url of the playlist: ")
+PListItems = Playlist(GetLink)
+
+print(f'Downloading: {GetLink.title}')
+
+for video in PListItems.videos:
     print(video.title)
     st = video.streams.get_highest_resolution()
     st.download()
